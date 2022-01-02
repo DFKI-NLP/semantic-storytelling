@@ -1,0 +1,96 @@
+<!--
+ - Copyright 2017
+ - Ubiquitous Knowledge Processing (UKP) Lab
+ - Technische Universität Darmstadt
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -  http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:panel>
+    <div class="scrolling flex-content text-relation-background" style="padding: 10px;">
+        <form wicket:id="textRelationForm">
+            <div class="text-control action-bar action-bar-group margin-bottom justify-content-between">
+                <div class="align-horizontal">
+                    Pairwise Navigation
+                    <div class="btn-group" style="margin-left: 10px">
+                        <button type="button" wicket:id="pairPrevious" class="btn btn-light"><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                        <button type="button" wicket:id="pairNext" class="btn btn-light"><i class="fas fa-step-forward" aria-hidden="true"></i></button>
+                        <button type="button" wicket:id="pairNextNone" class="btn btn-light"><i class="fas fa-fast-forward" aria-hidden="true"></i></button>
+                    </div>
+                    <div wicket:id="progress-panel">
+
+                    </div>
+                </div>
+                <div class="align-horizontal">
+                    <button type="button" wicket:id="filterButton" class="btn btn-light" style="margin-right: 10px">Filter</button>
+                    <button type="button" wicket:id="statisticsButton" class="btn btn-light" style="margin-right: 10px">Statistics</button>
+                    <button type="button" wicket:id="saveButton" class="btn btn-light"><i class="fas fa-save" aria-hidden="true" style="margin-right: 10px"></i>Save</button>
+                </div>
+            </div>
+            <div class="text-relation">
+                <div class="text-wrapper">
+                    <div wicket:id="textLeft" class="text-block margin-bottom">
+                    </div>
+                    <div class="text-control action-bar action-bar-group">
+                        <div wicket:id="textLeftPosition"></div>
+                        <div class="btn-group">
+                            <button type="button" wicket:id="textLeftPrevious" class="btn btn-light"><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                            <button type="button" wicket:id="textLeftNext" class="btn btn-light"><i class="fas fa-step-forward" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div wicket:id="metaData_left">
+
+                    </div>
+                </div>
+                <div class="relation-col">
+                    <div class="relation-block">
+                        <div wicket:id="relationRightArrow" class="relation">
+                            <div class="arrow-line"></div>
+                            <div class="arrow right"></div>
+                        </div>
+                        <select name="RelationRight" wicket:id="relationRight"></select>
+                    </div>
+                    <div class="relation-block">
+                        <div wicket:id="relationLeftArrow" class="relation">
+                            <div class="arrow left"></div>
+                            <div class="arrow-line"></div>
+                        </div>
+                        <select name="RelationLeft" wicket:id="relationLeft"></select>
+                    </div>
+                </div>
+                <div class="text-wrapper">
+                    <div wicket:id="textRight" class="text-block margin-bottom">
+                    </div>
+                    <div class="text-control action-bar action-bar-group">
+                        <div wicket:id="textRightPosition"></div>
+                        <div class="btn-group">
+                            <button type="button" wicket:id="textRightPrevious" class="btn btn-light"><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                            <button type="button" wicket:id="textRightNext" class="btn btn-light"><i class="fas fa-step-forward" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div wicket:id="metaData_right">
+
+                    </div>
+                </div>
+            </div>
+            <div wicket:id="statistic-panel">
+            </div>
+            <div wicket:id="filter-panel">
+            </div>
+        </form>
+    </div>
+</wicket:panel>
+</body>
+</html>

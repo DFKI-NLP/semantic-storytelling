@@ -1,0 +1,53 @@
+// Copyright 2018
+// Ubiquitous Knowledge Processing (UKP) Lab
+// Technische Universität Darmstadt
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+// http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+[[sect_annotation_concept-linking]]
+= Concept Linking
+
+Concept Linking is the task of identifying concept mentions in the text and linking them to their
+corresponding concepts in a knowledge base.
+Use cases of Concept Linking are commonly found in the area of biomedical text mining, e.g.
+to facilitate understanding of unexplained terminology or abbreviations in scientific literature by
+linking biological entities.
+
+== Contextual Disambiguation
+
+Concept names can be ambiguous. There can be potentially many different concepts
+having the same name (consider the large number of famous people called John Smith). Thus, it is
+helpful to rank the candidates before showing them to the user in the annotation interface. If the
+ranking works well, the user can quickly choose on of the top-ranking candidates instead of having
+to scroll through a long list.
+
+To link a concept mention to the knowledge base, first select the mention annotation, then select
+the concept feature in the right sidebar of the annotation editor and start typing the name of
+a concept. A ranked list of candidates is then displayed in the form of a drop-down menu.
+In order to make the disambiguation process easier, descriptions are shown for each candidate.
+
+image::concept-linking2.png[align="center"]
+
+The suggestions are updated every time it receives new input.
+
+== Automated Concept Suggestions
+
+The Named Entity Linker (NEL) displays three highest-ranked candidates as suggestions boxes
+over each mention annotated as Named Entity.
+The user can accept, reject or ignore these suggestions.
+If a suggestion is rejected, it is not showed again.
+It is possible to combine the NEL with the existing Named Entity Recommenders for the NE type,
+which makes the annotation process even faster.
+The recommender needs to be set up in the <<sect_projects_recommendation, Project Settings>>.
+
+image::concept-linking4.png[align="center"]

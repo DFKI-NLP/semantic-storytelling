@@ -1,0 +1,206 @@
+.text-relation-background {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.navigation {
+
+}
+.align-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.text-relation {
+    display: flex;
+    flex-direction: row;
+}
+.text-relation .text-wrapper {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.text-wrapper .text-block {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 13px;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.margin-top {
+    margin-Top: 20px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.text-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px;
+}
+.meta-data {
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    margin-Top: 20px;
+}
+.meta-data table {
+    border: 0;
+}
+.invisible {
+    display: none;
+}
+.text-relation .relation-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.text-relation .relation-col .relation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.text-relation button {
+
+}
+.text-relation .relation-block {
+    margin-bottom: 20px;
+}
+.text-relation select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+    /*
+        Arrows
+     */
+.relation .arrow {
+    border: solid #c6c6c6;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.relation .arrow.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -12px;
+}
+
+.relation .arrow.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-right: -12px;
+}
+
+.relation .arrow.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.relation .arrow.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.relation .arrow-line {
+    flex: 1;
+    height: 4px;
+    background-color: #C6C6C6;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+.relation.active .arrow-line {
+    background-color: #2e8b57;
+}
+.relation.active .arrow {
+    border: solid #2e8b57;
+    border-width: 0 4px 4px 0;
+}
+/*
+    Progress Panel
+ */
+.textrel-progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+.textrel-progress-indicator-wrapper {
+    height: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #C6C6C6;
+    border-radius: 7px;
+}
+.textrel-progress-indicator {
+    background-color: #2e8b57;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+}
+/*
+    Statistics
+ */
+.textrel-statistic-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.textrel-statistic-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.textrel-statistics-indicator-wrapper {
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+.textrel-statistics-indicator {
+    background-color: #76b594;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+}
+.textrel-statistics, .textrel-filter {
+    padding: 20px;
+}
+.textrel-statistics-name {
+    text-align: center;
+    font-weight: bold;
+}
+.textrel-statistics-label {
+    text-align: center;
+    top: 0;
+    z-index: 3;
+    position: absolute;
+}
+.textrel-filter .btn i {
+    margin-right: 10px;
+}

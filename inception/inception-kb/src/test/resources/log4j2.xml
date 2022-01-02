@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+  <Appenders>
+    <Console name="ConsoleAppender" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %level{length=5} %logger{1} - %msg%n" />
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <!-- Logger name="de.tudarmstadt.ukp.inception.kb.querybuilder.SPARQLQueryBuilder" level="TRACE"/ -->
+    <!-- Avoid warning on cookies with an invalid expiration date - cf. issue #739 -->
+    <Logger name="org.apache.http.client.protocol.ResponseProcessCookies" level="ERROR"/>
+    
+    <Logger name="de.tudarmstadt.ukp.inception.kb.querybuilder.SPARQLQueryBuilder" level="WARN"/>
+    
+    <Root level="warn">
+      <AppenderRef ref="ConsoleAppender" />
+    </Root>
+  </Loggers>
+</Configuration>
